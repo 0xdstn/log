@@ -1,0 +1,124 @@
+html, body { 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body { 
+    background: #2c2c2c;
+    box-sizing: border-box;
+    color:  #fff;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 1px;
+    line-height: 1.75em; 
+    font-family: monospace;
+    font-size: 14px;
+}
+
+body.modalOpen {
+    overflow: hidden;
+}
+
+a {
+    color: #fff;
+}
+
+header {
+    align-items: center;
+    border-bottom: solid 1px #1c1c1c;
+    display: flex;
+    flex-direction: columns;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+input#entry {
+    background: #777;
+    border: none;
+}
+
+select#glyph,
+input#save {
+    border: none;
+    background: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: .9em;
+}
+
+#log {
+    padding: 1em;
+}
+
+#about {
+    background: #2c2c2c;
+    display: none;
+    padding: 1em;
+    position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+}
+
+#about.open {
+    display: block;
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+footer {
+    border-top: solid 1px #1c1c1c;
+    padding: 1em;
+    user-select: none;
+    text-align: center;
+}
+
+#close-about {
+    background: #ddd;
+    border-radius: 4px;
+    color: #000;
+    font-weight: bold;
+    padding: .5em;
+    text-decoration: none;
+}
+
+#entries {
+    padding-bottom: 1em;
+}
+
+#entries span {
+    color: #00aaee;
+    position: relative;
+}
+
+#entries span.task {
+    top: -3px;
+}
+
+#entries span.done,
+#entries span.event {
+    top: -1px;
+}
+
+#entries a {
+    background: #444;
+    display: inline-block;
+    height: 15px;
+    line-height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: .8em;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "LOG",
+  "short_name": "LOG",
+  "description": "A bullet journal companion app",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/~dustin/log/",
+  "scope": "/~dustin/log/",
+  "display": "standalone",
+  "theme_color": "#2c2c2c",
+  "background_color": "#2c2c2c"
+}
