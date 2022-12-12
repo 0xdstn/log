@@ -1,4 +1,4 @@
-const cacheName = 'log-v4';
+const cacheName = 'log-v5';
 const appFiles = [
     '/~dustin/log/',
     '/~dustin/log/index.html',
