@@ -49,14 +49,22 @@ textarea#entry {
 }
 
 select#glyph,
-input#save {
+input#save,
+input#undo {
     border: none;
     background: #fff;
     border-radius: 3px;
     cursor: pointer;
     font-size: .9em;
     margin-bottom: 1em;
+    padding: .5em;
     width: 100%;
+}
+
+input#undo {
+    background: #666;
+    color: #ccc;
+    padding: .75em .5em;
 }
 
 #log {
@@ -127,4 +135,8 @@ footer {
     border-radius: 3px;
     text-decoration: none;
     font-size: .8em;
+}
+
+#undo {
+    display: none;
 }

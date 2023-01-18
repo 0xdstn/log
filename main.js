@@ -10,6 +10,7 @@ const closeAbout = document.getElementById('close-about');
 const entryInput = document.getElementById('entry');
 const glyphInput = document.getElementById('glyph');
 const saveButton = document.getElementById('save');
+const undoButton = document.getElementById('undo');
 
 const glyphs = {
     '-' : 'note',
@@ -20,7 +21,7 @@ const glyphs = {
 
 var editing = false;
 var editingIndex = null;
-
+var lastDeleted = '';
 var entries = '';
 var l = localStorage.getItem('log');
 if(l !== null) {
@@ -37,6 +38,20 @@ closeAbout.addEventListener('click',function(e) {
     e.preventDefault();
     about.classList.remove('open');
     body.classList.remove('modalOpen');
+});
+
+undoButton.addEventListener('click',function(e) {
+    e.preventDefault();
+
+    var sep = '|';
+    if(entries == '') {
+        sep = '';
+    }
+    entries += sep + lastDeleted;
+    lastDeleted = '';
+    undoButton.style.display = 'none';
+    localStorage.setItem('log',entries);
+    renderLogs();
 });
 
 saveButton.addEventListener('click',function(e) {
@@ -57,6 +72,7 @@ saveButton.addEventListener('click',function(e) {
     }
     localStorage.setItem('log',entries);
     entryInput.value = '';
+    glyphInput.value = '-';
     renderLogs();
 });
 
@@ -78,12 +94,13 @@ function renderLogs() {
     document.querySelectorAll('#entries a').forEach(btn => {
         btn.addEventListener('click',function(e){
             e.preventDefault();
-            console.log(e.target);
             var action = e.target.getAttribute('data-action');
             var i = e.target.getAttribute('data-i');
 
             if(action == 'del') {
                 var items = entries.split('|');
+                lastDeleted = items[i];
+                undoButton.style.display = 'block';
                 items.splice(i,1);
                 entries = items.join('|');
                 localStorage.setItem('log',entries);
@@ -94,6 +111,7 @@ function renderLogs() {
                 var glyph = item[0];
                 var entry = item.substring(2);
                 entryInput.value = entry;
+                glyphInput.value = glyph;
                 editing = true;
                 editingIndex = parseInt(i);
             }
