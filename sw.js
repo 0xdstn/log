@@ -1,10 +1,10 @@
-const cacheName = 'log-v6';
+const cacheName = 'log-v6a';
 const appFiles = [
-    '/~dustin/log/',
-    '/~dustin/log/index.html',
-    '/~dustin/log/main.js',
-    '/~dustin/log/style.css',
-    '/~dustin/log/icon-512.png'
+    '/log/',
+    '/log/index.html',
+    '/log/main.js',
+    '/log/style.css',
+    '/log/icon-512.png'
 ];
 
 self.addEventListener('install', (e) => {

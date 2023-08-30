@@ -9,8 +9,8 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/~dustin/log/",
-  "scope": "/~dustin/log/",
+  "start_url": "/log/",
+  "scope": "/log/",
   "display": "standalone",
   "theme_color": "#2c2c2c",
   "background_color": "#2c2c2c"
