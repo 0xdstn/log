@@ -8,4 +8,4 @@ I decided to create this simple app for my on the go bullet journal needs. You c
 
 This site is a PWA, meaning you can install it to your device in Android and it will look and act like a native application.
 
-Live version: [https://0xdstn.site/log/](https://0xdstn.site/log/)
+Live version: [https://0xdstn.github.io/log/](https://0xdstn.github.io/log/)
